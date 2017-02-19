@@ -1,0 +1,6 @@
+framework module Pods_RectangleDissolve_Example {
+  umbrella header "Pods-RectangleDissolve_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

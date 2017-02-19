@@ -1,0 +1,8 @@
+use_frameworks!
+
+target 'RectangleDissolve_Example' do
+
+  pod 'RectangleDissolve', :path => '../'
+
+end
+

@@ -1,0 +1,16 @@
+PODS:
+  - RectangleDissolve (0.1.0)
+
+DEPENDENCIES:
+  - RectangleDissolve (from `../`)
+
+EXTERNAL SOURCES:
+  RectangleDissolve:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RectangleDissolve: 4076cdf35b2414cb39c45997b55953ecfea5aa31
+
+PODFILE CHECKSUM: 63a1f0d17aadb781a6e6d2c5c38ba021c3c81cf4
+
+COCOAPODS: 1.1.1

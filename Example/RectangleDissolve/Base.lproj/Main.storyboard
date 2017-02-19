@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3tT-U2-llJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hmI-zw-BO1">
+            <objects>
+                <viewController id="3tT-U2-llJ" customClass="ViewController" customModule="RectangleDissolve_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLL-Dh-U2W"/>
+                        <viewControllerLayoutGuide type="bottom" id="WpG-pK-8pN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZb-Ca-G8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c12-8U-BAF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Jhm-di-CVL" appends="YES" id="RRn-lH-evk"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="c12-8U-BAF" secondAttribute="trailing" id="3KG-vV-FlW"/>
+                            <constraint firstItem="c12-8U-BAF" firstAttribute="top" secondItem="HZb-Ca-G8Q" secondAttribute="top" id="Ibe-gt-cDf"/>
+                            <constraint firstItem="c12-8U-BAF" firstAttribute="leading" secondItem="HZb-Ca-G8Q" secondAttribute="leading" id="h8y-mn-5tb"/>
+                            <constraint firstAttribute="bottom" secondItem="c12-8U-BAF" secondAttribute="bottom" id="sM3-N7-VBf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="c12-8U-BAF" id="pWr-Bd-2at"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztl-Zt-hoc" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Jhm-di-CVL">
+                    <connections>
+                        <action selector="screenWasTapped:" destination="3tT-U2-llJ" id="hMF-jY-TGb"/>
+                        <outlet property="delegate" destination="3tT-U2-llJ" id="pZ0-F6-abw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2" y="137"/>
+        </scene>
+    </scenes>
+</document>
