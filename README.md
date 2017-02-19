@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/RectangleDissolve.svg?style=flat)](http://cocoapods.org/pods/RectangleDissolve)
 [![Platform](https://img.shields.io/cocoapods/p/RectangleDissolve.svg?style=flat)](http://cocoapods.org/pods/RectangleDissolve)
 
+## Description
+
+Screen transition animator which decomposes the screen we are transitioning from into a group of rectangles which fade over time thus showing us the new controller.
+
+![Alt Text](https://github.com/mcrakhman/FilesRepository/blob/master/blackwhitetransition.gif)
+![Alt Text](https://github.com/mcrakhman/FilesRepository/blob/master/psychtransition.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
