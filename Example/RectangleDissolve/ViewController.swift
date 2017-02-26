@@ -11,13 +11,19 @@ import Pods_RectangleDissolve_Example
 
 class ViewController: UIViewController {
 
-    let animator = RectangleDissolveAnimator()
+    var animator: RectangleDissolveAnimator!
     var shouldDismiss = false
 
     @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let configuration = RectangleDissolveAnimatorConfiguration(rectanglesVertical: 14,
+                                                                   rectanglesHorizontal: 8,
+                                                                   batchSize: 20,
+                                                                   fadeAnimationDuration: 0.3,
+                                                                   tempo: 1000.0)
+        animator = RectangleDissolveAnimator(configuration: configuration)
 
         if !shouldDismiss {
             //view.backgroundColor = UIColor.white

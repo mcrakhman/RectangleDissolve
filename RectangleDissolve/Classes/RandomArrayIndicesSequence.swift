@@ -28,30 +28,30 @@ class BatchRandomArrayIndicesIterator: IteratorProtocol {
 }
 
 class RandomArrayIndicesIterator: IteratorProtocol {
-    
+
     var array: [Int] = []
     var currentMax: Int = 0
-    
+
     init(max: Int) {
         array = (1 ... max).enumerated().map { offset, element in
             return offset
         }
         currentMax = array.count - 1
     }
-    
+
     func next() -> Int? {
         guard currentMax >= 0 else {
             return nil
         }
-        
+
         let randomElementIndex = Int(arc4random_uniform(UInt32(currentMax)))
         let randomElement = array[randomElementIndex]
-        
+
         if randomElementIndex != currentMax {
             swap(&array[randomElementIndex], &array[currentMax])
         }
         currentMax -= 1
-        
+
         return randomElement
     }
 }
@@ -59,11 +59,11 @@ class RandomArrayIndicesIterator: IteratorProtocol {
 class RandomArrayIndicesSequence: Sequence {
     typealias Iterator = RandomArrayIndicesIterator
     let max: Int
-    
+
     init(max: Int) {
         self.max = max
     }
-    
+
     func makeIterator() -> RandomArrayIndicesIterator {
         return RandomArrayIndicesIterator(max: max)
     }

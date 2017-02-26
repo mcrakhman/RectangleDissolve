@@ -24,7 +24,7 @@ class TempoCounter {
     fileprivate var displayLink: CADisplayLink?
     fileprivate let frameRate = 60
     fileprivate var internalCounter = 0
-    
+
     var tempo = 60.0
     var beatStep = BeatStep.fourth
     var handler: Handler?
@@ -32,7 +32,7 @@ class TempoCounter {
     fileprivate var nextTickLength: Int {
         return Int(Double(frameRate) / (tempo / 60.0 * Double(beatStep.rawValue) / 4.0))
     }
-    
+
     init() {
         displayLink = CADisplayLink(target: self, selector: #selector(fire))
         if #available(iOS 10.0, *) {
@@ -41,22 +41,22 @@ class TempoCounter {
         displayLink?.add(to: RunLoop.main, forMode: .commonModes)
         displayLink?.isPaused = true
     }
-    
+
     deinit {
         displayLink?.remove(from: RunLoop.main, forMode: .commonModes)
     }
-    
+
     func start() {
         displayLink?.isPaused = false
     }
-    
+
     func stop() {
         displayLink?.isPaused = true
     }
-    
+
     @objc func fire() {
         internalCounter += 1
-        
+
         if internalCounter >= nextTickLength {
             internalCounter = 0
             handler?()
