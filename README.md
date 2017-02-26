@@ -31,13 +31,25 @@ animator.fadeAnimationDuration = 0.3 // fade animation duration
 animator.tempo = 1000 // the frequency of each batch start fading
 ```
 
+Or this may also be done explicitly via configuration
+
+```swift
+let configuration = RectangleDissolveAnimatorConfiguration(rectanglesVertical: 14,
+                                                           rectanglesHorizontal: 8,
+                                                           batchSize: 20,
+                                                           fadeAnimationDuration: 0.3,
+                                                           tempo: 1000.0)
+animator = RectangleDissolveAnimator(configuration: configuration)
+```
+
+
 ## Installation
 
 RectangleDissolve is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "RectangleDissolve"
+pod 'RectangleDissolve', '~> 0.1.1'
 ```
 ##  
 
