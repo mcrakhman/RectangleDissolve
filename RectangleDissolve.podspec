@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RectangleDissolve'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'The transition animator which pixelates the view from which we are transitioning'
   s.homepage         = 'https://github.com/mcrakhman/RectangleDissolve'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
